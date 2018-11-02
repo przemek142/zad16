@@ -24,6 +24,18 @@ public class ExampleUnitTest {
     }
 
     @Test
+    public void taxForMin1_isCorrect() {
+        // {0 , 3000, 3091,49} => 0
+        //given
+        String income = "-1";
+
+        // when
+        String result = tax.calculateTax("0");
+
+        //then
+        Assert.assertThat(result, is("0 zł"));
+    }
+    @Test
     public void taxFor0_isCorrect() {
         // {0 , 3000, 3091,49} => 0
         //given
